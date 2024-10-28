@@ -2,15 +2,14 @@
 const numberKm = prompt("Quanti chilometri vuoi percorrere?")
 const age = prompt("Quanti anni hai?")
 
+if (isNaN(numberKm) || isNaN(age))  {
+    alert("chilometri ed età devono essere dei numeri! ");}
+    else{
 const userKm = parseInt(numberKm);
 const userAge = parseInt(age);
 console.log(numberKm, age, userKm, userAge);
 
 //Esecuzione logica
-
-// Bonus implementare controllo se sono numeri ed eventualmente 
-// stampare un messaggio appropriato
-
 let totalPrice;
 
 let partialPrice = (0.21 * userKm);
@@ -33,3 +32,4 @@ let result = `il costo del biglietto è ${totalPrice}€`
 
 //Output
 console.log(result);
+}
